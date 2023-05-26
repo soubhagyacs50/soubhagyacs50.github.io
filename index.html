@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tribe Delight.co</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">TribeDelight<span>.co</span></a>
+        <ul class="navigation">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#expert">Expert</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Proud canteen of <span>OUTR</span>(formerly CET)</h2>
+            <p>"We dish out thalis that quench your afternoon hunger to momos and sandwiches and rolls that removes
+                your snack cravings(also your will to eat).<br><br> We also serve traditional odia breakfast, bara and ghuguni
+                and mind you we pay a lot of attention to hygeine which is why we don't wear gloves nor do we use
+                hair caps because we don't want even the 0.001% of germ on the plastic gloves getting into your food."</p>
+            <a href="#" class="btn">Our Menu</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText">About Us</h2>
+                <p>"We are a canteen inside OUTR popularly known as CET college bhubaneswar, our Food gives student depression.
+                    We cater to teacher and student alike. Beside is not the image of CET. Don't be fooled by it. We proudly boast
+                    our heritage of diseases we have given to our regular customers. We consider food poisioning to be in the safe
+                    category of diseases.
+                    <br><br>While preparing our food we take extreme caution in terms of hygiene and flavour which is why our customers
+                    keep coming for more (because they have no option). What makes us special is not out food or our extremely professional
+                    dealings with customer no, we are known for our washroom which directly faces the beach of loneliness and misery.
+                     A view you cannot deny appreciating."</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="about_us.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="titleText">Our Menu</h2>
+            <p>Aao kabhi haveli mai.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="Menu_pic1.jpg">
+                </div>
+                <div class="text">
+                    <h3>Paisa waste Momo aur fiki chutney</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="Menu_pic2.jpg">
+                </div>
+                <div class="text">
+                    <h3>Equisitely prepared banana served with
+                        the finest caviar which will definitely
+                        rob you of your money
+                    </h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="Menu_pic3.jpg">
+                </div>
+                <div class="text">
+                    <h3>Uncle's maggi</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="Menu_pic4.jpg">
+                </div>
+                <div class="text">
+                    <h3>Roll? woh kya hota hai?
+                        parathe ke andar pyaj khana
+                        hai toh bolo</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="Menu_pic5.jpg">
+                </div>
+                <div class="text">
+                    <h3>Aukaat se mehengi Sandwich</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="Menu_pic6.jpg">
+                </div>
+                <div class="text">
+                    <h3>Ye humein bhi nahi pata kya hai</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+
+</body>
+</html>
