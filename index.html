@@ -1,350 +1,61 @@
-<!doctype html>
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Module 3 Assignment</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-	<header>
-		<nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
-			<div class="container">
-				<div class="navbar-brand">
-					<a href="index.html">
-						<h1>Food, LLC</h1>
-					</a>
-				</div>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <div id="food">
-        FOOD, LLC
-      </div> 
-           <!-- Navigation starts as empty UL that will be populated with JS -->
-        <!-- Start of Responsive integrate Icon -->
-        <div id="integrate" class="mobile-btn">
-          <div class="bar bar1"></div>
-          <div class="bar bar2"></div>
-          <div class="bar bar3"></div>
-        </div>
-      <ul id="navbar__list"  class="mobile__nav toggle-show"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Our Menu</h1>
-    </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section1" data-nav="Chicken" class="your-active-class">
-      <div class="landing__container">
-        <h2>Chicken</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section2" data-nav="Beef" >
-      <div class="landing__container">
-        <h2>Beef</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-				<div id="navbarSupportedContent" class="collapse navbar-collapse">
-					<ul id="nav-list" class="navbar-nav mr-auto d-lg-none">
-						<li class="nav-item active">
-							<a class="nav-link text-center" href="#chicken">Chicken</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-center" href="#beef">Beef</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-center" href="#sushi">Sushi</a>
-						</li>
-					</ul>
-				</div><!-- .collapse .navbar-collapse -->
-			</div><!-- .container -->
-		</nav><!-- .navbar-->
-	</header>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Sushi" >
-      <div class="landing__container">
-        <h2>Sushi</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-	<div id="main-content" class="container">
-		<h2 id="page-title" class="text-center">Our Menu</h2>
-		<div id="main-text">
-			<h3 id="chicken">Chicken</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				Aenean
-				massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-				Donec
-				quam
-				felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				Donec
-				pede
-				justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-				a,venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-				dapibus.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-				porttitor
-				eu,
-				consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-				tellus.Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-				ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-				Maecenas
-				tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit adipiscing sem neque sed
-				ipsum.
-				Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-				tincidunt
-				tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
-				eget
-				eros
-				faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-				Sed
-				consequat, leo eget bibendum sodales, augue velit cursus nunc.
-			</p>
-			<h3 id="beef">Beef</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				Aenean
-				massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-				Donec
-				quam
-				felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				Donec
-				pede
-				justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-				a,venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-				dapibus.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-				porttitor
-				eu,
-				consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-				tellus.Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-				ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-				Maecenas
-				tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit adipiscing sem neque sed
-				ipsum.
-				Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-				tincidunt
-				tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
-				eget
-				eros
-				faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-				Sed
-				consequat, leo eget bibendum sodales, augue velit cursus nunc.
-			</p>
-			<h3 id="sushi">Sushi</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				Aenean
-				massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-				Donec
-				quam
-				felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				Donec
-				pede
-				justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-				a,venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-				dapibus.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-				porttitor
-				eu,
-				consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-				tellus.Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-				ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-				Maecenas
-				tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit adipiscing sem neque sed
-				ipsum.
-				Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-				tincidunt
-				tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
-				eget
-				eros
-				faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-				Sed
-				consequat, leo eget bibendum sodales, augue velit cursus nunc.
-			</p>
-		</div>
-	</div>
-
-	<script src="js/jquery-3.3.1.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <!-- Creat New Section -->
-    <section id="section4" data-nav="Ice Cream" >
-      <div class="landing__container">
-        <h2>Ice Cream</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
-
-  <div class="scroll-top">
-    <a class="scroll-top-link" href="#">&#8593;</a>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" >Food, LLC</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    
+      <ul class="nav navbar-nav navbar-right" >
+        <li style>
+        <a href="#" > 
+        <span class="glyphicon glyphicon-cutlery"></span> chicken</a>
+        </li>
+        <li>
+        <a href="#" >
+        <span class="glyphicon glyphicon-info-sign"></span> beef</a>
+        </li>
+        <li>
+        <a href="#">
+        <span class="glyphicon glyphicon-certificate"></span> sushi</a>
+        </li>
+      </ul>
+    </div>
   </div>
-   <!-- JavaScript file -->
-   <script src="./js/app.js"></script>
+</nav>
+<br>
+<br>  
+<h1><p class="text-center">Our Menu</p></h1>
+
+
+<div id="main-content" class="container">
+  <div id="home-tiles" class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+            
+            <p id="chickstory">
+          <h2>Chicken</h2>
+              He heard quiet steps behind him. That didn't bode well. Who could be following him this late at night and in this deadbeat part of town? And at this particular moment, just after he pulled off the big time and was making off with the greenbacks. Was there another crook who'd had the same idea, and was now watching him and waiting for a chance to grab the fruit of his labour? Or did the steps behind him mean that one of many law officers in town was on to him and just waiting to pounce and snap those cuffs on his wrists? He nervously looked all around. Suddenly he saw the alley. Like lightning he darted off to the left and disappeared between the two warehouses almost falling over the bin lying in the middle of the pavement. He tried to nervously tap his way along in the inky darkness and suddenly stiffened: it was a dead-end, he would have to go back the way he had come. The steps got louder and louder, he saw the black outline of a figure coming around the corner. Is this the end of the line? he thought pressing himself back against the wall trying to make himself invisible in the dark, was all that planning and energy wasted? He was dripping with sweat now, cold and wet, he could smell the fear coming off his clothes. Suddenly next to him, with a barely noticeable squeak, a door swung quietly to and fro in the night's breeze. Could this be the haven he'd prayed for? Slowly he slid toward the door, pressing himself more and more into the wall, into the dark, away from his enemy. Would this door save his hide?He heard quiet steps behind him. That didn't bode well. Who could be following him this late at night and in this deadbeat part of town? And at this particular moment, just after he pulled off the big time and was making off with the greenbacks. Was there another crook who'd had the same idea, and was now watching him and waiting for a chance to grab the fruit of his labour? Or did the steps behind him mean that one of many law officers in town was on to him and just waiting to pounce and snap those cuffs on his wrists? He nervously looked all around. Suddenly he saw the alley. Like lightning he darted off to the left and disappeared between the two warehouses almost falling over the bin lying in the middle of the pavement. He tried to nervously tap his way along in the inky darkness and suddenly stiffened: it was a dead-end, he would have to go back the way he had come. The steps got louder and louder, he saw the black outline of a figure coming around the corner. Is this the end of the line? he thought pressing himself back against the wall trying to make himself invisible in the dark, was all that planning and energy wasted? He was dripping with sweat now, cold and wet, he could smell the fear coming off his clothes. Suddenly next to him, with a barely noticeable squeak, a door swung quietly to and fro in the night's breeze. Could this be the haven he'd prayed for? Slowly he slid toward the door, pressing himself more and more into the wall, into the dark, away from his enemy. Would this door save his hide?He heard quiet steps behind him. That didn't bode well. Who could be following him this late at night and in this deadbeat part of town? And at this particular moment, just after he pulled off the big time and was making off with the greenbacks. Was there another crook who'd had the same idea, and was now watching him and waiting for a chance to grab the fruit of his labour? Or did the steps behind him mean that one of many law officers in town was on to him and just waiting to pounce and snap those cuffs on his wrists? He nervously looked all around. Suddenly he saw the alley. Like lightning he darted off to the left and disappeared between the two warehouses almost falling over the bin lying in the middle of the pavement. He tried to nervously tap his way along in the inky darkness and suddenly stiffened: it was a dead-end, he would have to go back the way he had come. The steps got louder and louder, he saw the black outline of a figure coming around the corner. Is this the end of the line? he thought pressing himself back against the wall trying to make himself invisible in the dark, was all that planning and energy wasted? He was dripping with sweat now, cold and wet, he could smell the fear coming off his clothes. Suddenly next to him, with a barely noticeable squeak, a door swung quietly to and fro in the night's breeze. Could this be the haven he'd prayed for? Slowly he slid toward the door, pressing himself more and more into the wall, into the dark, away from his enemy. Would this door save his hide?He heard quiet steps behind him. That didn't bode well. Who could be following him this late at night and in this deadbeat part of town? And at this particular moment, just after he pulled off the big time and was making off with the greenbacks. Was there another crook who'd had the same idea, and was now watching him and waiting for a chance to grab the fruit of his labour? Or did the steps behind him mean that one of many law officers in town was on to him and just waiting to pounce and snap those cuffs on his wrists? He nervously looked all around. Suddenly he saw the alley. Like lightning he darted off to the left and disappeared between the two warehouses almost falling over the bin lying in the middle of the pavement. He tried to nervously tap his way along in the inky darkness and suddenly stiffened: it was a dead-end, he would have to go back the way he had come. The steps got louder and louder, he saw the black outline of a figure coming around the corner. Is this the end of the line? he thought pressing himself back against the wall trying to make himself invisible in the dark, was all that planning and energy wasted? He was dripping with sweat now, cold and wet, he could smell the fear coming off his clothes. Suddenly next to him, with a barely noticeable squeak, a door swung quietly to and fro in the night's breeze. Could this be the haven he'd prayed for? Slowly he slid toward the door, pressing himself more and more into the wall, into the dark, away from his enemy. Would this door save his hide?
+            </p>
+      </div>
+    </div>
+</div>
+
 </body>
-
 </html>
- 133 changes: 133 additions & 0 deletions133  
-week-3-module-3-solution/js/app.js
-@@ -0,0 +1,133 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-
-/**
- * Define Global Variables
- * 
-*/
-
-const navFragment = document.createDocumentFragment();
-const mySec = document.querySelectorAll('section');
-const myNav = document.getElementById('navbar__list');
-const myLinks = document.getElementsByClassName("menu__link");
-const myButton = document.getElementById("integrate");
-
-/**
- * End Global Variables
- * Start Helper Functions
- *
-*/
-
-// function to Build the Navbar
-const createNavBar = () => {
-    for (const section of mySec) {
-        // define navItem -> 'li' & navItemLink -> 'a'
-        const navItem = document.createElement('li');
-        const navItemLink = document.createElement('a');
-
-        // Add menu__link class, set the link's text & set the href attribute dynamicly
-        navItemLink.classList.add('menu__link');
-        navItemLink.innerHTML = `${section.dataset.nav}`;
-        navItemLink.setAttribute("href", `#${section.id}`);
-
-        // Build the navbar
-        navItem.appendChild(navItemLink);
-        navFragment.appendChild(navItem);
-        myNav.append(navFragment);
-    };
-};
-
-// Active Class
-const activeClass = () => {
-    for (const section of mySec) {
-        // rect is each section's boundingClientRect.
-        // allNavLinks is the purpose to save the section id name into a variable.
-        const rect = section.getBoundingClientRect();
-        const allNavLinks = document.querySelectorAll(`[href="#${section.id}"]`);
-        for (const link of allNavLinks) {
-            (rect.top >= 0 && rect.top < 500) ? (
-                // add active classes to targeted link and section
-                `
-                ${section.classList.add("your-active-class")}
-                ${link.classList.add("menu__link__active")}
-                `
-            ) : (
-                //remove the active class from all other sections
-                `
-                ${section.classList.remove("your-active-class")}
-                ${link.classList.remove("menu__link__active")}
-                `
-            );
-        };
-    };
-};
-
-// Smooth Scroll
-const smoothScroll = () => {
-    for (const link of myLinks) {
-        link.addEventListener("click", e => {
-            e.preventDefault();
-            const sectionID = e.target.getAttribute("href").substring(1);
-            document.getElementById(`${sectionID}`).scrollIntoView({ behavior: "smooth" });
-        });
-    };
-};
-
-/**
- * End Helper Functions
- * Begin Main Functions
- *
-*/
-
-// build the navbar
-createNavBar();
-
-// Add class 'active' to section when near top of viewport
-// Set active sections
-document.addEventListener('scroll', activeClass);
-
-//When link click Scrolling to Section
-smoothScroll();
-
-/**
- * End Main Functions
- * Begin Events
- *
-*/
-
-// Build menu
-myButton.addEventListener("click", () => myNav.classList.toggle("toggle-show"));
-
-// Extras Scroll to top
-const scrollTopDiv = document.querySelector(".scroll-top");
-const scrollTopLink = document.querySelector(".scroll-top-link");
-
-window.onscroll = () => {
-    if (window.pageYOffset > 300) {
-        scrollTopDiv.style.display = "flex";
-    } else {
-        scrollTopDiv.style.display = "none";
-    };
-};
-
-scrollTopLink.addEventListener("click", e => {
-    e.preventDefault();
-    document.querySelector(".main__hero").scrollIntoView({ behavior: "smooth", block: "center" });
-});
